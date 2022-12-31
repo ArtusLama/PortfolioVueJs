@@ -1,0 +1,25 @@
+
+
+
+:root {
+  --color-green: #5DFFAE;
+  --color-white: #ffffff;
+  --color-background: #1E2124;
+}
+
+
+body {
+  min-height: 100vh;
+  color: #FFFFFF;
+  background: var(--color-background);
+  line-height: 1.6;
+  font-family: Montserrat, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+* {
+  color: var(--color-white);
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
