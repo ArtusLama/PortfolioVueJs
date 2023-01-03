@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="timeline">
         
         <TimeLineElement title="2019 - 2022" text="izafgdwauvdadizdgdqwg ihdgwaid d  wdvdvq gj q vdgjqv qiw hr qhzi kdw hwdq."/>
         <TimeLineElement title="Hallo123" text="izafgdwauvdadizdgdqwg ihdgwaid d  wdvdvq gj q vdgjqv qiw hr qhzi kdw hwdq."/>
@@ -19,7 +19,8 @@
 
 
 <style scoped>
-    div {
+    .timeline {
         margin-left: 10rem;
+        margin-top: 100vh;
     }
 </style>

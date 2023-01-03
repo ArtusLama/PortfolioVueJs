@@ -19,6 +19,7 @@ body[theme="purple"] {
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
     color: #FFFFFF;
     background: var(--color-background);
     line-height: 1.6;

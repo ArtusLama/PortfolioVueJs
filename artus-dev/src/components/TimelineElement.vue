@@ -2,7 +2,7 @@
 
 
 <template>
-    <div class="timelineElement">
+    <div class="timelineElement" v-motion-slide-visible-left>
         <div class="timelineElementPath">
             <div class="timelineElementDot"></div>
             <div class="timelineElementStroke"></div>
@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        props: ["title", "text"]
+        props: ["title", "text", "fade-delay"]
     }
 </script>
 
