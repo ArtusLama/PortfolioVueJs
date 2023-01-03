@@ -2,24 +2,33 @@
 
 
 :root {
-  --color-green: #5DFFAE;
-  --color-white: #ffffff;
-  --color-background: #1E2124;
+    --color-green: #5DFFAE;
+    --color-green-rgb: 93, 255, 174;
+    --color-text-gradient: linear-gradient(45deg, #40ffa6, #2df8ff, #40ffa6) 0 0 / 200% 100%;
+    --color-white: #ffffff;
+    --color-background: #1E2124;
+}
+body[theme="purple"] {
+    --color-green: #b65dff;
+    --color-green-rgb: 182, 93, 255;
+    --color-text-gradient: linear-gradient(45deg, #9940ff, #ff2dc0, #9940ff) 0 0 / 200% 100%;
+    --color-white: #ffffff;
+    --color-background: #1E2124;
 }
 
 
 body {
-  min-height: 100vh;
-  color: #FFFFFF;
-  background: var(--color-background);
-  line-height: 1.6;
-  font-family: Montserrat, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    color: #FFFFFF;
+    background: var(--color-background);
+    line-height: 1.6;
+    font-family: Montserrat, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 * {
-  color: var(--color-white);
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    color: var(--color-white);
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

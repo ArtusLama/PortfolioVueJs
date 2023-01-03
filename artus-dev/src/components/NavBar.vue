@@ -8,13 +8,14 @@
         <h1><span class="green_logo_bracket">&lt;</span> Artus <span class="green_logo_bracket">&gt;</span></h1>
         
         <ul>
-            <li><a href="">DOCUMENTATION</a></li>
-            <li><a href="">Babelibub</a></li>
-            <li><a href="">Boaaa</a></li>
-            <li><a href="">HalloHollaHello</a></li>
+            <li><router-link to="/">HOME</router-link></li>
+            <li><router-link to="/">ÜBER MICH</router-link></li>
+            <li><router-link to="/projects">PROJEKTE</router-link></li>
+            <li><router-link to="/">Test</router-link></li>
             <a href="https://github.com/ArtusLama" target="_blank" class="navbar_icon navbar_large_screen"><GithubIcon/></a>
             <button class="navbar_button navbar_large_screen">Contact</button>
             <button class="navbar_button navbar_button_small_screen navbar_small_screen"><GithubIcon/><span>GitHub</span></button>
+            
         </ul>
         
     </div>
@@ -44,6 +45,7 @@
     }
     .navbar ul li a {
         text-decoration: none;
+        white-space: nowrap;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 16px;
@@ -62,7 +64,7 @@
         width: 1.5rem !important;
     }
     .navbar_icon svg path {
-        fill: white;
+        fill: var(--color-white);
     }
     .navbar_icon svg:hover path {
         fill: var(--color-green);
@@ -74,12 +76,14 @@
         height: 2rem;
         width: 6rem;
         cursor: pointer;
+        color: var(--color-green);
 
         margin-left: 1rem;
 
         transition: background-color 100ms ease-in;
     }
     .navbar_button:hover {
+        color: var(--color-white);
         background-color: var(--color-green);
         
     }

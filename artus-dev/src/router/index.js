@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ProjectsView from '../views/ProjectsView.vue'
 import PageNotFoundView from '../views/PageNotFoundView.vue'
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
       redirect: "/"
     },
     {
+      path: '/projects',
+      name: 'Projekte',
+      component: ProjectsView
+    },
+    {
       path: "/:catchAll(.*)",
       name: "NotFound",
       component: PageNotFoundView
@@ -23,7 +29,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = "Artus | " + to.name;
+  document.title = to.name + " · Arthur";
   next();
 });
 
