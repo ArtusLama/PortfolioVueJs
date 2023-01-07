@@ -21,6 +21,6 @@
 <style scoped>
     .timeline {
         margin-left: 10rem;
-        margin-top: 100vh;
+        margin-top: 5rem;
     }
 </style>

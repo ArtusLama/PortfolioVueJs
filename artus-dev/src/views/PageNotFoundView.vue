@@ -1,11 +1,10 @@
 
 <template>
-    <div class="pageNotFound">
-        <h1 class="pageNotFound404">404</h1>
-        <h1 class="pageNotFoundTitle">Die Seite existiert nicht!</h1>
-        <router-link to="/" class="pageNotFoundHomeLink">nach Hause</router-link>
+    <div class="pageNotFound" v-motion-slide-visible-bottom>
+        <h1 class="pageNotFound404">Oops!</h1>
+        <h1 class="pageNotFoundText">I'm sorry, but the page you were looking for has become alive and decided to leave the internet.</h1>
+        <router-link to="/" class="pageNotFoundHomeLink">Go Home</router-link>
     </div>
-    <div class="funnyCursorCircle"></div>
 
     
 </template>
@@ -13,35 +12,39 @@
 
 
 
-<style>
+<style> 
+
 
     .pageNotFoundHomeLink {
         border: 4px solid var(--color-green);
         color: var(--color-green);
         border-radius: 100px;
         text-decoration: none;
-        padding: 15px 75px;
+        padding: 13px 20px;
+        width: 12rem;
         font-size: 20px;
         transition: all 150ms ease-in-out;
         animation: pageNotFoundTextAnimation 5s linear infinite;
     }
     .pageNotFoundHomeLink:hover {
-        color: var(--color-background);
         border: none;
-        padding: 25px 85px;
+        color: var(--color-background);
         background: var(--color-text-gradient);
     }
 
     .pageNotFound404 {
         font-size: 8rem;
     }
-    .pageNotFoundTitle {
-        font-size: 5rem;
-        margin-top: -8rem;
+    .pageNotFoundText {
+        width: 60%;
+        font-size: 2rem;
+        margin-top: -5rem;
     }
     .pageNotFound {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        margin-top: -4rem;
     }
 
     @keyframes pageNotFoundTextAnimation {

@@ -6,16 +6,16 @@
 <template>
     <div class="navbar">
         <h1><span class="green_logo_bracket">&lt;</span> Artus <span class="green_logo_bracket">&gt;</span></h1>
-        
+        <button class="navbar_button navbar_button_small_screen navbar_small_screen"><GithubIcon/><span>GitHub</span></button>
+            
         <ul>
             <li><router-link to="/">HOME</router-link></li>
-            <li><router-link to="/">ÜBER MICH</router-link></li>
-            <li><router-link to="/projects">PROJEKTE</router-link></li>
-            <li><router-link to="/">Test</router-link></li>
+            <li><router-link to="/about-me">ABOUT ME</router-link></li>
+            <li><router-link to="/projects">PROJECTS</router-link></li>
+        </ul>
+        <ul class="navbar_large_screen">
             <a href="https://github.com/ArtusLama" target="_blank" class="navbar_icon navbar_large_screen"><GithubIcon/></a>
             <button class="navbar_button navbar_large_screen">Contact</button>
-            <button class="navbar_button navbar_button_small_screen navbar_small_screen"><GithubIcon/><span>GitHub</span></button>
-            
         </ul>
         
     </div>
@@ -25,8 +25,8 @@
     .navbar {
 
         display: flex;
-        align-items: center;
         justify-content: space-evenly;
+        
         padding: 0 10rem;
     }
     .navbar h1 {
@@ -36,6 +36,9 @@
         display: flex;
         align-items: center;
         list-style-type: none;
+    }
+    .navbar_large_screen {
+        padding: 0;
     }
     .navbar ul *{
         transition: color, fill, background-color 100ms ease-in-out;
@@ -54,11 +57,13 @@
     .navbar ul li a:hover {
         color: var(--color-green);
     }
+    .navbar ul li a.router-link-active {
+        color: var(--color-green);
+    }
     .navbar_icon {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        margin-left: 4rem;
     }
     .navbar_icon svg {
         width: 1.5rem !important;
@@ -115,10 +120,12 @@
             text-align: center;
         }
         .navbar ul {
+            padding: 0;
             flex-direction: column;
         }
         .navbar ul *{
-            width: 100%;
+            padding: 0;
+            margin: 0 !important;
             text-align: center;
         }
         .navbar_button_small_screen {

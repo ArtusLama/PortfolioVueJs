@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProjectsView from '../views/ProjectsView.vue'
 import PageNotFoundView from '../views/PageNotFoundView.vue'
+import AboutMeView from '../views/AboutMeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,8 +18,13 @@ const router = createRouter({
     },
     {
       path: '/projects',
-      name: 'Projekte',
+      name: 'Projects',
       component: ProjectsView
+    },
+    {
+      path: '/about-me',
+      name: 'About me',
+      component: AboutMeView
     },
     {
       path: "/:catchAll(.*)",

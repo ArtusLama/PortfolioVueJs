@@ -1,19 +1,13 @@
 <script setup>
-  	import TimeLine from "@/components/Timeline.vue"
 </script>
 
 <template>
   	<main>
-    	<div class="homeTitle">
-			<h2>Moin, ich bin</h2>
+    	<div class="homeTitle" v-motion-slide-visible-bottom>
+			<h2>Welcome, I'm</h2>
 			<h1>Arthur</h1>
-			<h3>- dafwwa ef</h3>
-			<h3>- wa 3r 3res</h3>
+			<h3>-> developer</h3>
 		</div>
-    
-    	<TimeLine/>
-
-
 
   	</main>
 </template>
@@ -34,14 +28,18 @@
         animation: pageNotFoundTextAnimation 5s linear infinite;
     }
 	.homeTitle {
+		margin-top: 6rem;
 		text-align: center;
 		padding: 2rem;
 	}
     .homeTitle h1 {
 		margin-top: -2rem;
-    	font-size: 6rem;
+    	font-size: 8rem;
     }
     .homeTitle h2 {
+		font-size: 3rem;
+    }
+	.homeTitle h3 {
 		font-size: 2rem;
     }
 
