@@ -18,6 +18,8 @@ body[theme="purple"] {
 
 
 body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     color: #FFFFFF;
     background: var(--color-background);
@@ -30,5 +32,4 @@ body {
     font-weight: bold;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
