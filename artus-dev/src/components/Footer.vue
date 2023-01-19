@@ -9,9 +9,9 @@
         
         <div class="footerSection">
             <ul>
-                <li class="footerIcon"><DiscordIcon class="footerIcon_Discord"/></li>
-                <li class="footerIcon"><GitHub class="footerIcon_Github"/></li>
-                <li class="footerIcon"><DiscordIcon class="footerIcon_Discord"/></li>
+                <li class="footerIcon"><a href="https://discord.com/users/713455158625042433" target="_blank"><DiscordIcon class="footerIcon_Discord"/></a></li>
+                <li class="footerIcon"><a href="https://github.com/ArtusLama" target="_blank"><GitHub class="footerIcon_Github"/></a></li>
+                <li class="footerIcon"><a href="https://discord.com/users/713455158625042433" target="_blank"><DiscordIcon class="footerIcon_Discord"/></a></li>
             </ul>
         </div>
         <div class="footerSection">
@@ -55,6 +55,18 @@
     .footerIcon {
         width: 3rem;
         height: 3rem;
+        display: grid;
+        place-items: center;
+        transition: filter 150ms ease-in-out;
+    }
+    .footerIcon a {
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        place-items: center;
+    }
+    .footerIcon:hover {
+        filter: brightness(75%);
     }
     .footerIcon svg {
         width: 3rem;
@@ -66,6 +78,8 @@
     }
     .footerIcon_Github {
         fill: #ececec;
+        width: 2.4rem !important;
+        height: 2.4rem !important;
     }
 
     .footerLink a{
