@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <main v-motion-slide-visible-bottom>
+  <main>
     <TimeLine/>
   </main>
 </template>

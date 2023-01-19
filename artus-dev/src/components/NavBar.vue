@@ -1,6 +1,7 @@
 
 <script setup>
     import GithubIcon from "./icons/GithubIcon.vue"
+    import router from "@/router/index.js"
     
 </script>
 
@@ -17,7 +18,7 @@
         </ul>
         <ul>
             <a href="https://github.com/ArtusLama" target="_blank" class="navbar_icon"><GithubIcon/></a>
-            <button class="navbar_button">Contact</button>
+            <a href="mailto:arthur.paucke@gmail.com"><button class="navbar_button">Contact</button></a>
         </ul> 
     </div>
 
@@ -27,9 +28,9 @@
         <ul class="smallNavbar_header">
             <h1><span class="green_logo_bracket">&lt;</span> Artus <span class="green_logo_bracket">&gt;</span></h1>
             <span class="navbar_hamburger" @click="toggleHamburgerNavbarMenu()">
-                <div class="navbar_hamburger_1"></div>
-                <div class="navbar_hamburger_2"></div>
-                <div class="navbar_hamburger_3"></div>
+                <div class="navbar_hamburgerLine menuLine1"></div>
+                <div class="navbar_hamburgerLine menuLine2"></div>
+                <div class="navbar_hamburgerLine menuLine3"></div>
             </span>
         </ul>
         <div class="smallNavbarMenuContent">
@@ -39,7 +40,7 @@
                 <li><router-link to="/projects">PROJECTS</router-link></li>
             </ul>
             <ul>
-                <button class="smallNavbar_button"><GithubIcon/><span>GitHub</span></button>
+                <a href="https://github.com/ArtusLama" target="_blank"><button class="smallNavbar_button"><GithubIcon/><span>GitHub</span></button></a>
             </ul>
         </div>
         
@@ -55,7 +56,18 @@
             
             toggleHamburgerNavbarMenu() {
                 document.querySelector(".smallNavbarMenuContent").classList.toggle("showMenuContent");
+                document.querySelector(".navbar_hamburger").classList.toggle("menuOpened");
+            },
+            closeHamburgerNavbarMenu() {
+                document.querySelector(".smallNavbarMenuContent").classList.remove("showMenuContent");
+                document.querySelector(".navbar_hamburger").classList.remove("menuOpened");
             }
+        },
+        mounted() {
+            router.beforeEach((to, from, next) => {
+                this.closeHamburgerNavbarMenu();
+                next()
+            })
         }
 
     }
@@ -69,8 +81,6 @@
 
         display: flex;
         justify-content: space-evenly;
-        
-        padding: 0 10rem;
     }
     .navbar h1 {
         white-space: nowrap;
@@ -141,11 +151,39 @@
 
     
 
+
     .navbar_hamburger {
+        position: absolute;
+        right: 2rem;
         width: 2rem;
         height: 2rem;
-        background-color: rgb(121, 121, 121);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
+    .navbar_hamburgerLine {
+        height: 4px;
+        width: 100%;
+        background-color: var(--color-white);
+        border-radius: 20px;
+        
+    }
+    .navbar_hamburger > .navbar_hamburgerLine {
+        transition: all 200ms ease-in-out;
+    }
+    .navbar_hamburger.menuOpened > .navbar_hamburgerLine.menuLine1 {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .navbar_hamburger.menuOpened > .navbar_hamburgerLine.menuLine2 {
+        opacity: 0;
+        transform: rotateX(2deg);
+    }
+    .navbar_hamburger.menuOpened > .navbar_hamburgerLine.menuLine3 {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+
+
 
     .navbarSmallScreen {
         display: none;
@@ -153,14 +191,16 @@
     @media screen and (max-width: 768px) {
         .navbarSmallScreen {
             display: flex;
-            position: static;
-            background-color: rgb(24, 24, 27);
+            background-color: var(--color-background-2);
             flex-direction: column;
             width: 100vw;
             padding: 0;
             left: 0;
             right: 0;
             top: 0;
+            
+        
+            z-index: 9999;
         }
         .navbarLargeScreen {
             display: none;
@@ -179,7 +219,7 @@
 
         .smallNavbar_header {
             flex-direction: row !important;
-            justify-content: space-evenly;
+            justify-content: center;
             width: 100vw;
             
         }
@@ -187,6 +227,8 @@
             text-align: center;
             left: 0;
         }
+
+    
 
         .smallNavbarMenuContent {
             display: none;
@@ -197,11 +239,16 @@
 
         .smallNavbar_button {
             white-space: nowrap;
+            background-color: var(--color-green);
+            border: none;
+            border-radius: 100px;
+            padding: 4px 6px !important;
+            cursor: pointer; 
         }
         .smallNavbar_button svg {
             width: 1.2rem;
             fill: var(--color-white);
-            margin-right: 6px;
+            margin-right: 6px !important;
             vertical-align: middle;
         }
         .smallNavbar_button span {

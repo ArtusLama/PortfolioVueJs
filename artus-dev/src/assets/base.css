@@ -7,13 +7,19 @@
     --color-text-gradient: linear-gradient(45deg, #40ffa6, #2df8ff, #40ffa6) 0 0 / 200% 100%;
     --color-white: #ffffff;
     --color-background: #1E2124;
+    --color-background-2: #191d1e;
+    --color-grey: #58595a;
+    --color-light-grey: #bababa;
 }
-body[theme="purple"] {
+body[theme="purple"] {  
     --color-green: #b65dff;
     --color-green-rgb: 182, 93, 255;
     --color-text-gradient: linear-gradient(45deg, #9940ff, #ff2dc0, #9940ff) 0 0 / 200% 100%;
     --color-white: #ffffff;
     --color-background: #1E2124;
+    --color-background-2: #191d1e;
+    --color-grey: #58595a;
+    --color-light-grey: #bababa;
 }
 
 

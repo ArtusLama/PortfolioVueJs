@@ -6,7 +6,7 @@
     	<div class="homeTitle" v-motion-slide-visible-bottom>
 			<h2>Welcome, I'm</h2>
 			<h1>Arthur</h1>
-			<h3>-> developer</h3>
+			<h3>a developer</h3>
 		</div>
 
   	</main>
@@ -41,6 +41,7 @@
     }
 	.homeTitle h3 {
 		font-size: 2rem;
+		margin-top: -2rem;
     }
 
 </style>
