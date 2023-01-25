@@ -69,8 +69,8 @@
         filter: brightness(75%);
     }
     .footerIcon svg {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         cursor: pointer;
     }
     .footerIcon_Discord {
@@ -78,8 +78,8 @@
     }
     .footerIcon_Github {
         fill: #ececec;
-        width: 2.4rem !important;
-        height: 2.4rem !important;
+        width: 1.9rem !important;
+        height: 1.9rem !important;
     }
 
     .footerLink a{

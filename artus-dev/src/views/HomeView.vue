@@ -6,7 +6,7 @@
     	<div class="homeTitle" v-motion-slide-visible-bottom>
 			<h2>Welcome, I'm</h2>
 			<h1>Arthur</h1>
-			<h3>a developer</h3>
+			<h3>a idk xD</h3>
 		</div>
 
   	</main>
