@@ -1,4 +1,5 @@
 <script setup>
+	import WorkInProgress from '../components/utils/WorkInProgress.vue';
 </script>
 
 <template>
@@ -8,7 +9,7 @@
 			<h1>Arthur</h1>
 			<h3>a idk xD</h3>
 		</div>
-
+		<WorkInProgress/>
   	</main>
 </template>
 

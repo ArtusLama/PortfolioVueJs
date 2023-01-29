@@ -17,7 +17,7 @@
         <div class="footerSection">
             <ul>
                 <li class="footerLink"><router-link to="/">Home</router-link></li>
-                <li class="footerLink"><router-link to="/">Contact</router-link></li>
+                <li class="footerLink"><router-link to="/contact">Contact</router-link></li>
                 <li class="footerLink"><router-link to="/terms">Terms</router-link></li>
                 <li class="footerLink"><router-link to="/privacypolicy">Privacy Policy</router-link></li>
             </ul>
