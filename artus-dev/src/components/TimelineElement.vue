@@ -44,15 +44,18 @@
     .timelineElementStroke {
         margin-top: 1rem;
         width: 4px;
-        height: 20rem;
+        height: 12rem;
         border-radius: 100px;
         background: linear-gradient(180deg, rgba(255,255,255,1) 0%, var(--color-green) 20%, var(--color-green) 50%, rgba(0,0,0,0) 100%);
     }
 
 
+    .timelineElementContent {
+        width: 40vw;
+    }
     .timelineElementContent h1{
-       margin: 0 2rem;
-       font-weight: 600;
+        margin: 0 2rem;
+        font-weight: 600;
     }
     .timelineElementContent h2 {
         margin: 2rem 2rem;
