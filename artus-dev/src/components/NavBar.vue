@@ -18,7 +18,7 @@
         </ul>
         <ul>
             <a href="https://github.com/ArtusLama" target="_blank" class="navbar_icon"><GithubIcon/></a>
-            <a href="mailto:arthur.paucke@gmail.com"><button class="navbar_button">Contact</button></a>
+            <router-link to="/contact"><button class="navbar_button">Contact</button></router-link>
         </ul> 
     </div>
 
